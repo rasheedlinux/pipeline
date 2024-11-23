@@ -21,7 +21,7 @@ parameters {
                 echo 'Build complete.'
             }
         }
-        stage('Example1') {
+        stage('Example') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -31,6 +31,9 @@ parameters {
                 }
             }
         }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
         stage('Test') {
             steps {
                 echo 'Starting the Test stage...'
