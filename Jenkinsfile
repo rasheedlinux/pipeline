@@ -30,6 +30,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline execution finished.'
+            deleteDir()
         }
         success {
             echo 'Pipeline executed successfully!'
